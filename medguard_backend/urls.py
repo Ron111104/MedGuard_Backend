@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path
 from tester.views import hello
 from .views import home
+from .pred import predict_disease
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello, name='hello'),
-    path('/', home, name='home'),
+    path('predict-disease/', predict_disease, name='predict_disease'),
+    path('', home, name='home'),
 ]
